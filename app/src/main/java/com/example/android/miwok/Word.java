@@ -27,6 +27,12 @@ public class Word {
     /** Miwok translation for the word */
     private String mMiwokTranslation;
 
+    /** Miwok image that is associated with the word. By default this image is not provided unless it is set in the constructor  */
+    private int mMiwokImageId = NO_IMAGE_PROVIDED;
+
+    //This is used to indicate that no image was provided.
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     /**
      * Create a new Word object.
      *
@@ -34,11 +40,25 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation is the word in the Miwok language
      */
+
     public Word(String defaultTranslation, String miwokTranslation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
     }
 
+    /**
+     * Create a new Word object.
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+     * @param miwokTranslation is the word in the Miwok language
+     *
+     * @param miwokImageId is the image resource id for that word
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int miwokImageId) {
+        this(defaultTranslation, miwokTranslation);
+        mMiwokImageId = miwokImageId;
+    }
     /**
      * Get the default translation of the word.
      */
@@ -51,6 +71,24 @@ public class Word {
      */
     public String getMiwokTranslation() {
         return mMiwokTranslation;
+    }
+
+    /**
+     * Get the Miwok image associated to the word
+     * @return String imageUrl
+     */
+    public int getmMiwokImageId() {
+        return mMiwokImageId;
+    }
+
+    /**
+     * method to specify if a word has an image
+     * @return true or false
+     */
+    public boolean hasImage(){
+        
+        //if word has an image, it will return true, else it will return false
+        return getmMiwokImageId() != NO_IMAGE_PROVIDED;
     }
 
 }
