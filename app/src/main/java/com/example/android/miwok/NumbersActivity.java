@@ -52,7 +52,7 @@ public class NumbersActivity extends AppCompatActivity {
         // word_list.xml layout file.
         ListView listView = (ListView) findViewById(R.id.list);
         //listView.setBackgroundColor(R.color.category_numbers);
-        listView.setBackgroundColor(Color.parseColor("#16AFCA"));
+        listView.setBackgroundColor(Color.parseColor("#FD8E09"));
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
