@@ -30,6 +30,9 @@ public class Word {
     /** Miwok image that is associated with the word. By default this image is not provided unless it is set in the constructor  */
     private int mMiwokImageId = NO_IMAGE_PROVIDED;
 
+    /**Miwok audio that is associated with the word */
+    private int mMiwokAudio;
+
     //This is used to indicate that no image was provided.
     private static final int NO_IMAGE_PROVIDED = -1;
 
@@ -41,9 +44,10 @@ public class Word {
      * @param miwokTranslation is the word in the Miwok language
      */
 
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int miwokAudio) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mMiwokAudio = miwokAudio;
     }
 
     /**
@@ -55,8 +59,8 @@ public class Word {
      *
      * @param miwokImageId is the image resource id for that word
      */
-    public Word(String defaultTranslation, String miwokTranslation, int miwokImageId) {
-        this(defaultTranslation, miwokTranslation);
+    public Word(String defaultTranslation, String miwokTranslation, int miwokAudio, int miwokImageId) {
+        this(defaultTranslation, miwokTranslation, miwokAudio);
         mMiwokImageId = miwokImageId;
     }
     /**
@@ -79,6 +83,19 @@ public class Word {
      */
     public int getmMiwokImageId() {
         return mMiwokImageId;
+    }
+
+
+    /**
+     * Get the Miwok audio associated to the word
+     * @return int audioId
+     */
+    public int getmMiwokAudio() {
+        return mMiwokAudio;
+    }
+
+    public void setmMiwokAudio(int mMiwokAudio) {
+        this.mMiwokAudio = mMiwokAudio;
     }
 
     /**
