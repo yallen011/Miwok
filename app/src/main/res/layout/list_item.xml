@@ -29,7 +29,7 @@
 
     <TextView
         android:id="@+id/miwok_text_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/miwok_image"
         android:layout_marginLeft="16dp"
@@ -41,12 +41,20 @@
 
     <TextView
         android:id="@+id/default_text_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/miwok_image"
         android:layout_below="@+id/miwok_text_view"
         android:layout_marginLeft="16dp"
         android:textColor="@android:color/white"
         tools:text="one" />
+
+   <!-- <ImageView
+        android:id="@+id/miwok_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/miwok_text_view"
+        android:background="#16AFCA"
+       /> -->
 
 </RelativeLayout>

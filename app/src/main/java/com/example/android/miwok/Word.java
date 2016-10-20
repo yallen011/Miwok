@@ -59,7 +59,7 @@ public class Word {
      *
      * @param miwokImageId is the image resource id for that word
      */
-    public Word(String defaultTranslation, String miwokTranslation, int miwokAudio, int miwokImageId) {
+    public Word(String defaultTranslation, String miwokTranslation, int miwokImageId, int miwokAudio) {
         this(defaultTranslation, miwokTranslation, miwokAudio);
         mMiwokImageId = miwokImageId;
     }

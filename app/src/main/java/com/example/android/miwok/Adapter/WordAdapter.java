@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.miwok;
+package com.example.android.miwok.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -23,6 +23,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.android.miwok.R;
+import com.example.android.miwok.Word;
 
 import java.util.ArrayList;
 

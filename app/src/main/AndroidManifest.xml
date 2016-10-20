@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,16 +30,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NumbersActivity"
+            android:name=".activity.NumbersActivity"
             android:label="@string/category_numbers" />
         <activity
-            android:name=".FamilyActivity"
+            android:name=".activity.FamilyActivity"
             android:label="@string/category_family" />
         <activity
-            android:name=".ColorsActivity"
+            android:name=".activity.ColorsActivity"
             android:label="@string/category_colors" />
         <activity
-            android:name=".PhrasesActivity"
+            android:name=".activity.PhrasesActivity"
             android:label="@string/category_phrases" />
     </application>
 
