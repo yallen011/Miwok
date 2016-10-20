@@ -16,8 +16,11 @@
 package com.example.android.miwok.activity;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.android.miwok.R;
@@ -34,7 +37,7 @@ public class FamilyActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();
+        final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("father", "әpә", R.drawable.family_father, R.raw.family_father));
         words.add(new Word("mother", "әṭa", R.drawable.family_mother, R.raw.family_mother));
         words.add(new Word("son", "angsi", R.drawable.family_son, R.raw.family_son));
@@ -60,5 +63,21 @@ public class FamilyActivity extends AppCompatActivity {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
+
+        //plays the audio for number one when any item in the list is clicked click
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //get the word located in the list that is at same position as the item clicked in the list
+                Word currentWord = words.get(position);
+
+                //create the medial player with the audio file that is stored in the list for that word.
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), currentWord.getmMiwokAudio());
+
+                //play the file
+                mediaPlayer.start();
+            }
+        });
     }
 }
