@@ -31,6 +31,8 @@ import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
 
+    MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +75,7 @@ public class FamilyActivity extends AppCompatActivity {
                 Word currentWord = words.get(position);
 
                 //create the medial player with the audio file that is stored in the list for that word.
-                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), currentWord.getmMiwokAudio());
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), currentWord.getmMiwokAudio());
 
                 //play the file
                 mediaPlayer.start();

@@ -31,6 +31,7 @@ import java.util.ArrayList;
 
 public class ColorsActivity extends AppCompatActivity {
 
+    MediaPlayer mMediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +39,14 @@ public class ColorsActivity extends AppCompatActivity {
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red));
-        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
-        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
-        words.add(new Word("green", "chokokki", R.drawable.color_green));
-        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown));
-        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray));
-        words.add(new Word("black", "kululli", R.drawable.color_black));
-        words.add(new Word("white", "kelelli", R.drawable.color_white));
+        words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red, R.raw.color_red));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
+        words.add(new Word("green", "chokokki", R.drawable.color_green, R.raw.color_green));
+        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
+        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray, R.raw.color_gray));
+        words.add(new Word("black", "kululli", R.drawable.color_black, R.raw.color_black));
+        words.add(new Word("white", "kelelli", R.drawable.color_white, R.raw.color_white));
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
@@ -71,10 +72,10 @@ public class ColorsActivity extends AppCompatActivity {
                 Word currentWord = words.get(position);
 
                 //create the medial player with the audio file that is stored in the list for that word.
-                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), currentWord.getmMiwokAudio());
+                mMediaPlayer = MediaPlayer.create(getApplicationContext(), currentWord.getmMiwokAudio());
 
                 //play the file
-                mediaPlayer.start();
+                mMediaPlayer.start();
             }
         });
     }
