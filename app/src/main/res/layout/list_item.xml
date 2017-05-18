@@ -13,48 +13,55 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<!-- Layout for a single list item -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/items_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="@dimen/list_item_height">
+    android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/miwok_image"
-        android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height"
-        android:background="@color/tan_background"/>
 
-    <TextView
-        android:id="@+id/miwok_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/miwok_image"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@android:color/white"
-        tools:text="lutti" />
+    <!-- Layout for a single list item -->
+    <RelativeLayout
+        android:id="@+id/items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="@dimen/list_item_height">
 
-    <TextView
-        android:id="@+id/default_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/miwok_image"
-        android:layout_below="@+id/miwok_text_view"
-        android:layout_marginLeft="16dp"
-        android:textColor="@android:color/white"
-        tools:text="one" />
+        <ImageView
+            android:id="@+id/miwok_image"
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/list_item_height"
+            android:background="@color/tan_background" />
 
-   <!-- <ImageView
-        android:id="@+id/miwok_audio"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_toRightOf="@id/miwok_text_view"
-        android:background="#16AFCA"
-       /> -->
+        <TextView
+            android:id="@+id/miwok_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/miwok_image"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:text="lutti" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/default_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/miwok_text_view"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/miwok_image"
+            android:textColor="@android:color/white"
+            tools:text="one" />
+
+        <ImageView
+            android:id="@+id/miwok_play_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            tools:text="image"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</LinearLayout>

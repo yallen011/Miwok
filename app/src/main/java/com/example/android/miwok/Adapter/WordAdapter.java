@@ -76,6 +76,9 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         // the default TextView.
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
+        ImageView miwokPlayImageView = (ImageView) listItemView.findViewById(R.id.miwok_play_image);
+        miwokPlayImageView.setImageResource(R.drawable.play_arrow_white);
+
         //for the Phase Activity, there will be no image displayed since there is none
         ImageView miwokImageView = (ImageView) listItemView.findViewById(R.id.miwok_image);
         if (currentWord.hasImage()) {
@@ -90,7 +93,7 @@ public class WordAdapter extends ArrayAdapter<Word>  {
             final float scale = getContext().getResources().getDisplayMetrics().density;
             int pixels = (int) (88 * scale + 0.5f);
 
-            //get the relative layout then set the height to 88dp equialent in pixels
+            //get the relative layout then set the height to 88dp equivalent in pixels
             RelativeLayout r1 = (RelativeLayout) listItemView.findViewById(R.id.items_layout);
             RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT, pixels);
