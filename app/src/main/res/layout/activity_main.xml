@@ -19,45 +19,57 @@
     android:layout_height="match_parent"
     android:background="@color/tan_background"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".activity.MainActivity">
 
-    <TextView
+    <!-- Numbers category -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/numbers"
-        style="@style/CategoryStyle"
-        android:background="?android:attr/selectableItemBackground"
-        android:text="@string/category_numbers"
-        android:layout_weight="1"
-        android:textColor="#000000"/>
+        android:layout_height="wrap_content"
+        android:background="@color/category_numbers"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_numbers" />
+    </FrameLayout>
 
-    <TextView
+    <!-- Family category -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/family"
-        style="@style/CategoryStyle"
+        android:layout_height="wrap_content"
         android:background="@color/category_family"
-        android:text="@string/category_family"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/family"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_family" />
+    </FrameLayout>
 
-    <TextView
+    <!-- Colors category -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/colors"
-        style="@style/CategoryStyle"
+        android:layout_height="wrap_content"
         android:background="@color/category_colors"
-        android:text="@string/category_colors"
-        android:layout_weight="1"/>
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/colors"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_colors" />
+    </FrameLayout>
 
-    <TextView
+    <!-- Phrases category -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/phrases"
-        style="@style/CategoryStyle"
+        android:layout_height="wrap_content"
         android:background="@color/category_phrases"
-        android:text="@string/category_phrases"
-        android:layout_weight="1"/>
-
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/phrases"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_phrases" />
+    </FrameLayout>
 </LinearLayout>
