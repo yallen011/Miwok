@@ -27,9 +27,10 @@
         android:layout_height="match_parent"
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
-        android:background="@color/category_numbers"
+        android:background="?android:attr/selectableItemBackground"
         android:text="@string/category_numbers"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:textColor="#000000"/>
 
     <TextView
         android:layout_width="match_parent"
