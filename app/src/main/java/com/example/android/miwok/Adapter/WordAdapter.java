@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -94,10 +95,16 @@ public class WordAdapter extends ArrayAdapter<Word>  {
             int pixels = (int) (88 * scale + 0.5f);
 
             //get the relative layout then set the height to 88dp equivalent in pixels
-            RelativeLayout r1 = (RelativeLayout) listItemView.findViewById(R.id.items_layout);
-            RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT, pixels);
-            r1.setLayoutParams(rel_btn);
+//            RelativeLayout r1 = (RelativeLayout) listItemView.findViewById(R.id.items_layout);
+//            RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
+//                    ViewGroup.LayoutParams.WRAP_CONTENT, pixels);
+//            r1.setLayoutParams(rel_btn);
+
+            //get the linear layout then set the height to 88dp equivalent in pixels
+            LinearLayout l1 = (LinearLayout) listItemView.findViewById(R.id.items_layout_parent);
+            LinearLayout.LayoutParams lin_btn = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT,pixels);
+            l1.setLayoutParams(lin_btn);
         }
 
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
